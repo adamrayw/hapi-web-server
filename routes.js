@@ -40,6 +40,7 @@ const routes = [
     handler: (request, h) => {
       const { name = "stranger!" } = request.params;
       const { lang } = request.query;
+      const { username, password } = request.payload;
 
       if (lang === "id") {
         return `Hai, ${name}`;
